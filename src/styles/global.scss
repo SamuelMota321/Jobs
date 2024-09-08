@@ -1,0 +1,69 @@
+$color-black: black;
+$color-gray: #10111A80;
+$color-white: white;
+$color-lightblue: #F9F9FF;
+$color-blue: #8490FF;
+$font-stack: "Montserrat", sans-serif;
+$font-weight: 800;
+$font-light: 400;
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-stack;
+    background-color: $color-lightblue;
+    font-weight: $font-light;
+    color: $color-black;
+
+    #root {
+        min-height: 100vh;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-black;
+    color: $color-white;
+    height: 6.4375rem;
+    width: 100%;
+    position: fixed;
+    margin-top: auto;
+    bottom: 0;
+
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media (max-width: 600px) {
+        div {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    @media (min-width: 601px) {
+        div {
+            flex-direction: row;
+        }
+    }
+}

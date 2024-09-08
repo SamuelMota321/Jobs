@@ -1,0 +1,23 @@
+button {
+    height: clamp(2.1875rem, 2.5vw, 3.125rem);
+    min-width: 140px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 0 15px 0 15px;
+    border-radius: clamp(20px, 2.5vw, 40px);
+    border: none;
+
+    .light {
+        border: solid $color-blue 1px;
+        color: $color-blue;
+        background-color: $color-white;
+    }
+
+    .blue {
+        background-color: $color-blue;
+        color: $color-white;
+    }
+}
