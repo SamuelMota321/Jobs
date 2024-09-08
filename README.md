@@ -1,8 +1,8 @@
-# React + Vite
+# Jobs 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um site onde é possivel fazer cadastro de usuário, vagas de 
+emprego e candidatar-se para vagas. As vagas anúnciadas podem ser editadas ou excluidas.
 
-Currently, two official plugins are available:
+O site também conta com uma página dinâmica de buscas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### no geral é um projeto mais simples! Feito com react + scss
