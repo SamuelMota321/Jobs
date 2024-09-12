@@ -5,16 +5,14 @@ import { JobContext } from "../../providers/JobContext"
 
 export const JobList = () => {
 
-    const { jobList, error} = useContext(JobContext)
+    const { jobList, error } = useContext(JobContext)
 
 
     return (
-        <div>
+        <ul>
             {error ? <p>Não foi possiver renderizar a lista de vagas</p> : jobList.map((job, i) => (
-                <div>
-                    <JobCard key={i} jobId={i} title={job.position} text={job.description}  />
-                </div>
+                <JobCard key={i} jobId={i} title={job.position} text={job.description} />
             ))}
-        </div>
+        </ul>
     )
 }

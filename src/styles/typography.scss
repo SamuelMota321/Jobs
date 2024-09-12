@@ -21,3 +21,17 @@ p {
 .bold {
     font-weight: $font-weight;
 }
+
+.center {
+    text-align: center;
+}
+
+.color-blue {
+    color: $color-blue;
+}
+
+@media (max-width: 410px) {
+    h3 {
+        font-size: 1rem;
+    }
+}

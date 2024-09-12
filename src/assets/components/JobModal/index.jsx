@@ -5,6 +5,7 @@ import { useContext } from "react"
 import { JobContext } from "../../providers/JobContext"
 import { modalSchema } from "../../schemas/modalSchema"
 import { UserContext } from "../../providers/UserContext"
+import styles from './styles.module.scss'
 
 export const JobModal = ({ title, isjobModalOpen, setJobModalOpen, jobId, }) => {
     const { myApplications } = useContext(JobContext)
@@ -23,12 +24,12 @@ export const JobModal = ({ title, isjobModalOpen, setJobModalOpen, jobId, }) => 
     }
 
     return (
-        <div role="dialog">
+        <div className={styles.modal} role="dialog">
             {userState ?
                 <div>
                     <div>
-                        <h2>Candidatar-se</h2>
-                        <p>Você está se canditando para <span>{title}</span></p>
+                        <h2 className="color-blue">Candidatar-se</h2>
+                        <p>Você está se canditando para <span className="bold">{title}</span></p>
                     </div>
                     <form onSubmit={handleSubmit(submit)}>
                         <Input
@@ -58,8 +59,8 @@ export const JobModal = ({ title, isjobModalOpen, setJobModalOpen, jobId, }) => 
                 :
                 <div>
                     <div>
-                        <h2>Candidatar-se</h2>
-                        <p>Você deve estar logado para se canditadar como <span>{title}</span></p>
+                        <h2 className="color-blue">Candidatar-se</h2>
+                        <p>Você deve estar logado para se canditadar como <span className="bold">{title}</span></p>
                     </div>
                 </div>}
 

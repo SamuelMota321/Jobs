@@ -1,44 +1,74 @@
 @use '../../../../styles/global.scss';
 
 .toggleButton {
-    padding: 10px;
-    font-weight: global.$font-weight;
-    font-size: 30px;
-    border: none;
-    background-color: global.$color-lightblue;
-    color: global.$color-blue;
     position: relative;
+    width: 20px;
+    height: 20px;
 
-    &:before {
-        content: "+";
-        transition: transform 0.3s ease;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .horizontal,
+    .vertical {
+        position: absolute;
+        background-color: global.$color-blue;
     }
 
-    &.active:before {
-        transform: rotate(135deg);
+    .horizontal {
+        width: 20px;
+        height: 2px;
+        top: 9px;
+        /* Centraliza a linha horizontal */
+        left: 0;
+    }
+
+    .vertical {
+        width: 2px;
+        height: 20px;
+        top: 0;
+        left: 9px;
+        /* Centraliza a linha vertical */
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+
+    >div {
+        gap: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        cursor: pointer;
+    }
+
+    @media (max-width: 410px) {
+        >div {
+            gap: 10px;
+        }
+    }
+
+    >button {
+        width: 100%;
     }
 }
 
 .dropdownmenu {
+    padding: 0 60px;
     visibility: hidden;
     max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out, visibility 0.5s ease-in-out;
+
 
     &.active {
-        animation: drop .5s ease-in forwards;
         max-height: 500px;
         visibility: visible;
     }
+}
 
-    @keyframes drop {
-        from {
-            max-height: 0;
-        }
-
-        to {
-            max-height: 500px;
-        }
+@media (max-width: 410px) {
+    .dropdownmenu {
+        padding: 0 40px;
     }
 }
