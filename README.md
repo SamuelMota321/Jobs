@@ -5,4 +5,5 @@ emprego e candidatar-se para vagas. As vagas anúnciadas podem ser editadas ou e
 
 O site também conta com uma página dinâmica de buscas.
 
-### no geral é um projeto mais simples! Feito com react + scss
+## Feito com react + scss
+### no geral é um projeto mais simples!

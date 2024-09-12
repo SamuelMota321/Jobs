@@ -1,6 +1,6 @@
 button {
     height: clamp(2.1875rem, 2.5vw, 3.125rem);
-    min-width: 140px;
+    width: 140px;
     width: auto;
     display: flex;
     align-items: center;
@@ -9,15 +9,17 @@ button {
     padding: 0 15px 0 15px;
     border-radius: clamp(20px, 2.5vw, 40px);
     border: none;
+    cursor: pointer;
 
-    .light {
-        border: solid $color-blue 1px;
-        color: $color-blue;
-        background-color: $color-white;
-    }
+}
 
-    .blue {
-        background-color: $color-blue;
-        color: $color-white;
-    }
+.light {
+    border: solid $color-blue 1px;
+    color: $color-blue;
+    background-color: $color-white;
+}
+
+.blue {
+    background-color: $color-blue;
+    color: $color-white;
 }

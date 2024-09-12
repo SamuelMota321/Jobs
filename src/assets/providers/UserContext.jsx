@@ -75,9 +75,9 @@ export const UserContextProvider = ({ children }) => {
             }, 2500)
 
         } catch (error) {
-            const { data } = error.response
             setTypeToast("Ops, algo deu errado!", "error");
-
+            
+            const { data } = error.response
             if (data === "Email already exists") {
                 setError(true)
             }

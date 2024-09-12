@@ -1,0 +1,44 @@
+@use '../../../../styles/global.scss';
+
+.toggleButton {
+    padding: 10px;
+    font-weight: global.$font-weight;
+    font-size: 30px;
+    border: none;
+    background-color: global.$color-lightblue;
+    color: global.$color-blue;
+    position: relative;
+
+    &:before {
+        content: "+";
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.active:before {
+        transform: rotate(135deg);
+    }
+}
+
+.dropdownmenu {
+    visibility: hidden;
+    max-height: 0;
+
+    &.active {
+        animation: drop .5s ease-in forwards;
+        max-height: 500px;
+        visibility: visible;
+    }
+
+    @keyframes drop {
+        from {
+            max-height: 0;
+        }
+
+        to {
+            max-height: 500px;
+        }
+    }
+}

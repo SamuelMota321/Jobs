@@ -2,7 +2,7 @@ import { JobList } from "../../../components/JobList"
 
 export const JobSection = ({ title }) => {
     return (
-        <section>
+        <section className="container">
             {title ? <h1>{title}</h1> : ""}
             <JobList />
         </section>

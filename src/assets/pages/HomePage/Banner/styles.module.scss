@@ -1,0 +1,7 @@
+@use '../../../../styles/global.scss';
+
+.banner{
+    background-color: global.$color-blue;
+    color: global.$color-white;
+    padding: 5rem 0;
+}
