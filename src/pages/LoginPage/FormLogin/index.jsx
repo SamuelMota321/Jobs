@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form"
 import { loginSchema } from "../../../schemas/LoginSchema"
 import { useContext } from "react"
 import { UserContext } from "../../../providers/UserContext"
+import styles from './styles.module.scss'
+
 
 
 export const FormLogin = () => {
@@ -19,9 +21,9 @@ export const FormLogin = () => {
     }   
 
     return (
-        <div>
+        <div className="formDiv">
             <form onSubmit={handleSubmit(submit)}>
-                <h1>Faça login</h1>
+                <h1 className="color-blue">Faça login</h1>
                 <Input
                     type="email"
                     placeholder="E-mail"

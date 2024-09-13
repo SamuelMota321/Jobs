@@ -10,7 +10,6 @@ export const JobCard = ({ title, text, jobId }) => {
         <>
             <li>
                 <div className={styles.flex}>
-                    {/* Botão para alternar a visibilidade do dropdown */}
                     <div onClick={() => setVisibleDetails(!visibleDetails)}>
                         <button
                             className={`${styles.toggleButton} ${visibleDetails ? styles.active : ""}`}
@@ -24,7 +23,6 @@ export const JobCard = ({ title, text, jobId }) => {
                     <button className="light" onClick={() => setJobModalOpen(!isjobModalOpen)}>Candidatar-se</button>
 
                 </div>
-                {/* Dropdown que aparece ou desaparece suavemente */}
                 <p className={`${styles.dropdownmenu} ${visibleDetails ? styles.active : null}`}>
                     {text}
                 </p>

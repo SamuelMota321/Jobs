@@ -30,6 +30,7 @@ body {
     padding: 0 1.25rem 0 1.25rem;
 }
 
+
 header {
     display: flex;
     align-items: center;
@@ -37,13 +38,20 @@ header {
     min-height: 100px;
     height: auto;
 
+    h2 {
+        cursor: pointer;
+    }
+
+    p {
+        cursor: pointer;
+    }
 
     >div {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
     }
 
     @media (max-width: 600px) {

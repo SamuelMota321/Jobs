@@ -1,4 +1,4 @@
-import img from '../../../../img/About-img.png'
+import img from '../../../assets/img/About-img.png'
 import styles from './styles.module.scss'
 
 export const AboutUs = () => {
