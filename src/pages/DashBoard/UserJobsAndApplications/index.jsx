@@ -28,8 +28,8 @@ export const UserJobsAndApplications = () => {
     return (
         <div>
             <div className={styles.flex}>
-                <p className={MyJobs ? "color-blue bold" : " bold"} onClick={() => setJobs()}>Minhas vagas</p>
-                <p className={MyApplications ? "color-blue bold" : " bold"} onClick={() => setApplications()}>Minhas candidaturas</p>
+                <p className={`${MyJobs ? "color-blue bold" : " bold"} ${styles.cursor}`} onClick={() => setJobs()}>Minhas vagas</p>
+                <p className={`${MyApplications ? "color-blue bold" : " bold"} ${styles.cursor}`} onClick={() => setApplications()}>Minhas candidaturas</p>
             </div>
             {MyJobs ?
                 <div className={styles.jobs}>

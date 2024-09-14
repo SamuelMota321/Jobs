@@ -1,0 +1,76 @@
+@use '../../../../../styles/global.scss';
+
+.toggleButton {
+    position: relative;
+    width: 20px;
+    height: 20px;
+
+    .horizontal,
+    .vertical {
+        position: absolute;
+        background-color: global.$color-blue;
+    }
+
+    .horizontal {
+        width: 20px;
+        height: 2px;
+        top: 9px;
+        left: 0;
+    }
+
+    .vertical {
+        width: 2px;
+        height: 20px;
+        top: 0;
+        left: 9px;
+    }
+}
+
+.li {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+
+    >div {
+        gap: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: end;
+        cursor: pointer;
+    }
+
+    @media (max-width: 410px) {
+        >div {
+            gap: 10px;
+        }
+    }
+
+    >button {
+        width: 100%;
+    }
+}
+
+.dropdownmenu {
+
+    padding: 0 60px;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out, visibility 0.5s ease-in-out;
+
+    &.active {
+        max-height: 500px;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 410px) {
+    .dropdownmenu {
+        padding: 0 40px;
+    }
+}
