@@ -8,7 +8,7 @@ export const JobCard = ({ title, text, jobId }) => {
 
     return (
         <>
-            <li>
+            <li className={styles.li}>
                 <div className={styles.flex}>
                     <div onClick={() => setVisibleDetails(!visibleDetails)}>
                         <button

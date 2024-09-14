@@ -37,7 +37,7 @@ export const JobModal = ({ title, isjobModalOpen, setJobModalOpen, jobId, }) => 
             document.removeEventListener('mousedown', handleClickOutside)
             document.removeEventListener('keydown', handleKeyPress)
         }
-    }, [setJobModalOpen]) 
+    }, [setJobModalOpen])
 
     const submit = (formData) => {
         setTimeout(() => {
@@ -50,7 +50,7 @@ export const JobModal = ({ title, isjobModalOpen, setJobModalOpen, jobId, }) => 
     return (
         <div className={styles.modal} role="dialog">
             {userState ?
-                <div ref={modalRef}>
+                <div ref={modalRef} className="formDiv">
                     <div>
                         <h2 className="color-blue">Candidatar-se</h2>
                         <p>Você está se canditando para <span className="bold">{title}</span></p>
@@ -78,7 +78,7 @@ export const JobModal = ({ title, isjobModalOpen, setJobModalOpen, jobId, }) => 
                             {...register("linkedin")}
                             error={errors.linkedin}
                         />
-                        <button type="submit">Cadidatar-se</button>
+                        <button className="blue" type="submit">Cadidatar-se</button>
                     </form>
                 </div>
                 :

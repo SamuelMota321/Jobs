@@ -15,7 +15,6 @@
         width: 20px;
         height: 2px;
         top: 9px;
-        /* Centraliza a linha horizontal */
         left: 0;
     }
 
@@ -24,8 +23,11 @@
         height: 20px;
         top: 0;
         left: 9px;
-        /* Centraliza a linha vertical */
     }
+}
+
+.li {
+    width: 100%;
 }
 
 .flex {

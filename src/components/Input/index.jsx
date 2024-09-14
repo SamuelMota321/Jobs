@@ -1,9 +1,9 @@
 import { forwardRef } from "react"
 
-export const Input = forwardRef(({ ...rest }, ref) => {
+export const Input = forwardRef(({ ...rest }, ref, className) => {
     return (
-        <div>
-            <label className="headline">{rest.label}
+        <div className={className}>
+            <label>{rest.label}
                 <input ref={ref} {...rest} />
                 {rest.error?.message}
             </label>

@@ -5,6 +5,8 @@ import { useContext } from "react"
 import { Input } from "../../../components/Input"
 import { JobContext } from "../../../providers/JobContext"
 import { UserContext } from "../../../providers/UserContext"
+import { LuPlusCircle } from "react-icons/lu"
+import styles from './styles.module.scss'
 
 export const CreateJobForm = () => {
     const { createJob } = useContext(JobContext)
@@ -14,12 +16,12 @@ export const CreateJobForm = () => {
     })
 
     const submit = (formData) => {
-        createJob({...formData, userId: userState.id})
+        createJob({ ...formData, userId: userState.id })
         reset()
     }
 
     return (
-        <div>
+        <div className="formDiv">
             <form onSubmit={handleSubmit(submit)}>
                 <Input
                     type="text"
@@ -34,14 +36,19 @@ export const CreateJobForm = () => {
                     {...register("sallary")}
                     error={errors.sallary}
                 />
-                <Input
-                    type="text"
+                <textarea
+                    className={styles.textarea}
+                    type="textarea"
+                    rows="10"
                     placeholder="Descrição"
                     {...register("description")}
                     error={errors.description}
                 />
 
-                <button type="submit"><span>+</span> Criar Vaga </button>
+                <button className="blue" onClick={() => navigate("/criar-vagas")}>
+                    <LuPlusCircle size={21} />
+                    Criar vaga
+                </button>
             </form>
         </div>
     )

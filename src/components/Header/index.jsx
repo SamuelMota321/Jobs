@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom"
 import { UserContext } from "../../providers/UserContext"
 import { useContext } from "react"
 import styles from "./styles.module.scss"
+import { FaSearch } from "react-icons/fa";
+
 
 export const Header = () => {
     const { user, userLogout, userState } = useContext(UserContext)
@@ -22,7 +24,9 @@ export const Header = () => {
                 <h2 onClick={() => navigate("/")}>Jobs</h2>
                 {user ?
                     <div className={styles.buttonLayout}>
-                        <button className={`${styles.circleButton} light`} onClick={() => navigate("/vagas")}>p</button>
+                        <button className={`${styles.circleButton} light`} onClick={() => navigate("/vagas")}>
+                            <FaSearch />
+                        </button>
                         <button className={`${styles.circleButton} blue`} onClick={() => navigate("/dashboard")}>{getInitials()}</button>
                         <button className="light" onClick={() => userLogout()}>Sair</button>
                     </div>

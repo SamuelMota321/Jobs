@@ -1,0 +1,9 @@
+.start {
+    height: 75vh;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

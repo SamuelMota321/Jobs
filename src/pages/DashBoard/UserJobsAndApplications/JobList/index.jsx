@@ -12,10 +12,10 @@ export const JobList = () => {
     }, [])
 
     return (
-        <div>
+        <>
             {userJobList[0] ? userJobList.map((job, i) => (
-                <JobCard key={i} title={job.position} jobId={job.id}/>
+                <JobCard key={i} title={job.position} jobId={job.id} />
             )) : <p>você ainda não postou nenhuma vaga</p>}
-        </div>
+        </>
     )
 }

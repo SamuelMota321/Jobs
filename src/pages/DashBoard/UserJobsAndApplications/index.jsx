@@ -2,6 +2,9 @@ import { useState } from "react"
 import { JobList } from "./JobList"
 import { ApplicationList } from "./ApplicationList"
 import { useNavigate } from "react-router-dom"
+import styles from './styles.module.scss'
+import { LuPlusCircle } from "react-icons/lu";
+
 
 export const UserJobsAndApplications = () => {
     const [MyJobs, setMyJobs] = useState(false)
@@ -24,18 +27,23 @@ export const UserJobsAndApplications = () => {
 
     return (
         <div>
-            <p onClick={() => setJobs()}>Minhas vagas</p>
-            <p onClick={() => setApplications()}>Minhas candidaturas</p>
+            <div className={styles.flex}>
+                <p className={MyJobs ? "color-blue bold" : " bold"} onClick={() => setJobs()}>Minhas vagas</p>
+                <p className={MyApplications ? "color-blue bold" : " bold"} onClick={() => setApplications()}>Minhas candidaturas</p>
+            </div>
             {MyJobs ?
-                <div>
-                    <button onClick={() => navigate("/criar-vagas")}>Criar vaga</button>
+                <div className={styles.jobs}>
+                    <button className="blue" onClick={() => navigate("/criar-vagas")}>
+                        <LuPlusCircle size={21} />
+                        Criar vaga
+                    </button>
                     <JobList />
-                </div> : ''}
+                </div> : null}
             {MyApplications ?
-                <div>
+                <div className={styles.applications}>
                     <ApplicationList />
                 </div>
-                : ''}
+                : null}
         </div>
 
     )

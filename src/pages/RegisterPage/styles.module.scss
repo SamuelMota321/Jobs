@@ -1,0 +1,19 @@
+.section {
+    height: 75vh;
+}
+
+.container {
+    height: 100%;
+}
+
+.align{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    height: 100%;
+}

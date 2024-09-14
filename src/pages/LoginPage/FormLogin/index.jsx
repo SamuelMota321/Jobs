@@ -38,10 +38,10 @@ export const FormLogin = () => {
                 />
                 {error  == "Incorrect password"? <p>Senha Incorreta</p> : <></>}
                 {error  == "Cannot find user"? <p>Usuário não encontrado</p> : <></>}
-                <button type="submit">Entrar</button>
+                <button className={`${styles.button} blue`} type="submit">Entrar</button>
             </form>
 
-            <p>Não possui cadastro? <Link to="/register">Cadastre-se</Link></p>
+            <p>Não possui cadastro? <Link className="color-blue bold" to="/register">Cadastre-se</Link></p>
         </div>
     )
 }
