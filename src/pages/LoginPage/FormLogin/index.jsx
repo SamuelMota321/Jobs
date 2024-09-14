@@ -31,7 +31,7 @@ export const FormLogin = () => {
                     error={errors.email}
                 />
                 <Input
-                    type="Password"
+                    type="password"
                     placeholder="Senha"
                     {...register("password")}
                     error={errors.password}
